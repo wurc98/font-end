@@ -11,6 +11,11 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/proxy": "^2.0.1",
+    "element-ui": "^2.13.2",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {

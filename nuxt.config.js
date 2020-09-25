@@ -1,5 +1,9 @@
 
 export default {
+  //配置基础路由
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -29,12 +33,17 @@ export default {
   ** Global CSS
   */
   css: [
+    'assets/css/main.css',
+    'element-ui/lib/theme-chalk/index.css'
   ],
+  vendor:['element-ui'],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    "@/plugins/route",
+    "@/plugins/element"
   ],
   /*
   ** Auto import components
@@ -51,11 +60,12 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
   ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  }
+  },
 }
